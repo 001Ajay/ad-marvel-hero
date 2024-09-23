@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ad-marvel-hero
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+
+marvel:
+  baseUri: https://gateway.marvel.com:443
+  publicKey: 5a1e17272a76da7b96553586642aacbf
+  privateKey: de9ad12b7c81f5d676ea434c600a776fcecc5807
+  characters:
+    url: /v1/public/characters
+  comics:
+    url: /v1/public/comics
+
+logging:
+  level:
+    root: error
+    com.dev.ad_marvel_hero: debug
+
+server:
+  port: 8080
+
+app:
+  localhost-url: http://localhost:8080
+
+springdoc:
+  api-docs:
+    path: /api-docs
